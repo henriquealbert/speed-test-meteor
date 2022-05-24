@@ -13,6 +13,7 @@ export const App = () => {
   })
 
   const handleClick = () => {
+    setError('')
     setLoading(true)
     Meteor.call('speedTest.run', {}, (err, res) => {
       if (err) {
